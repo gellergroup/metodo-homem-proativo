@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Método Homem Proativo</title>
+<meta name="description" content="Descubra como desenvolver hábitos simples de iniciativa, responsabilidade e parceria que fortalecem o relacionamento e tornam a convivência da sua família muito mais leve." />
+<link rel="canonical" href="https://gabaaum.github.io/homem-proativo/" />
+
+<!-- redes sociais: sem isso, o link compartilhado aparece sem titulo nem imagem -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Método Homem Proativo" />
+<meta property="og:description" content="Você não precisa ser um marido perfeito. Só precisa deixar de ser alguém que espera sempre ser lembrado." />
+<meta property="og:image" content="https://gabaaum.github.io/homem-proativo/uploads/hero-1-secando-louca.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<style>
+  html, body { margin:0; padding:0; height:100%; background:#090907; overflow:hidden; }
+  /* 100dvh acompanha a barra do navegador no celular; 100vh fica como reserva */
+  #pagina { display:block; border:0; width:100vw; height:100vh; height:100dvh; }
+  #alternativa {
+    position:fixed; inset:0; display:none; place-items:center; text-align:center;
+    padding:32px; color:#EFE9DD; background:#090907;
+    font-family:Barlow, system-ui, -apple-system, sans-serif;
+  }
+  #alternativa a {
+    display:inline-block; margin-top:20px; padding:18px 32px;
+    background:linear-gradient(180deg,#F0CE84 0%,#D4A75E 38%,#C69550 60%,#A07739 100%);
+    color:#0A0806; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
+    text-decoration:none; font-size:15px;
+  }
+</style>
+</head>
+<body>
+
+<iframe
+  id="pagina"
+  src="https://gabaaum.github.io/homem-proativo/"
+  title="Método Homem Proativo"
+  allow="fullscreen"
+  referrerpolicy="no-referrer-when-downgrade"
+  loading="eager"></iframe>
+
+<!-- se o iframe nao carregar, o visitante nao fica numa tela preta -->
+<div id="alternativa">
+  <div>
+    <p style="font-size:19px;margin:0">Não foi possível carregar a página aqui.</p>
+    <a href="https://gabaaum.github.io/homem-proativo/">Abrir o Método Homem Proativo</a>
+  </div>
+</div>
+
+<script>
+(function () {
+  var quadro = document.getElementById('pagina');
+  var reserva = document.getElementById('alternativa');
+  var carregou = false;
+
+  quadro.addEventListener('load', function () { carregou = true; });
+
+  // se em 8s nada carregou, mostra o link direto em vez de tela preta
+  setTimeout(function () {
+    if (!carregou) {
+      quadro.style.display = 'none';
+      reserva.style.display = 'grid';
+    }
+  }, 8000);
+})();
+</script>
+</body>
+</html>
